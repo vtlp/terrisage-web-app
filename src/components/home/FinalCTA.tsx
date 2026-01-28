@@ -12,9 +12,9 @@ export function FinalCTA() {
             Ready to work smarter?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Share your details and we'll show you how Terrisage fits your team.
+            Share a few details and we’ll tailor a quick view of how Terrisage fits your team’s day-to-day.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               variant="hero"
@@ -31,9 +31,7 @@ export function FinalCTA() {
               Book a demo
             </Button>
           </div>
-          <p className="text-sm text-muted-foreground mt-4">
-            No calendar links. We'll get in touch.
-          </p>
+
         </div>
       </div>
     </section>

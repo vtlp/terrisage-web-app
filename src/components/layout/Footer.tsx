@@ -91,10 +91,10 @@ export function Footer() {
               © {new Date().getFullYear()} Terrisage. All rights reserved.
             </p>
             <a
-              href="mailto:contact@vtlptechnologies.com"
+              href="mailto:contact@terrisage.com"
               className="text-sm text-secondary-foreground/70 hover:text-accent transition-colors"
             >
-              contact@vtlptechnologies.com
+              contact@terrisage.com
             </a>
           </div>
         </div>

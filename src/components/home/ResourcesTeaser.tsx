@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 const featuredResources = [
   {
     title: "CRM Hygiene That Prints Money",
-    summary: "Practical habits that make a CRM worth using—clean data, clear next-steps, and follow-up discipline.",
+    summary: "Practical habits that make a CRM worth using: clean data, clear next-steps, and follow-up discipline.",
   },
   {
     title: "Rocks, Pebbles, and Sand",

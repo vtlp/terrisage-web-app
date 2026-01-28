@@ -10,7 +10,7 @@ const modules = [
   {
     icon: Puzzle,
     title: "Integrations",
-    description: "Connect with WhatsApp, social media, Meta ads, and Google.",
+    description: "Connect with external portals, Meta ads, Google and your website traffic.",
   },
   {
     icon: BarChart3,
