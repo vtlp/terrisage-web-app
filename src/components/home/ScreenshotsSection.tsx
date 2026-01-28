@@ -31,7 +31,7 @@ export function ScreenshotsSection() {
             ))}
           </div>
           <p className="text-center text-sm text-muted-foreground mt-4 italic">
-            Mobile app screenshots — placeholders to be replaced
+            Mobile app screenshots: placeholders to be replaced
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export function ScreenshotsSection() {
           ))}
         </div>
         <p className="text-center text-sm text-muted-foreground mt-4 italic">
-          Dashboard screenshots — placeholders to be replaced
+          Dashboard screenshots: placeholders to be replaced
         </p>
       </div>
     </section>

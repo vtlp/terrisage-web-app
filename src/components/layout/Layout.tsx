@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
 import { LeadCaptureForm } from "@/components/LeadCaptureForm";
+import { DemoBookingFlow } from "@/components/DemoBookingFlow";
 import { usePathname } from "next/navigation";
 
 interface LayoutProps {
@@ -12,6 +13,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const [formOpen, setFormOpen] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
   const [formVariant, setFormVariant] = useState<"register" | "demo" | "earlybird">("register");
   const pathname = usePathname();
 
@@ -21,8 +23,12 @@ export function Layout({ children }: LayoutProps) {
   }, [pathname]);
 
   const handleOpenForm = (variant: "register" | "demo" | "earlybird") => {
-    setFormVariant(variant);
-    setFormOpen(true);
+    if (variant === "demo") {
+      setDemoOpen(true);
+    } else {
+      setFormVariant(variant);
+      setFormOpen(true);
+    }
   };
 
   return (
@@ -37,6 +43,10 @@ export function Layout({ children }: LayoutProps) {
         onOpenChange={setFormOpen}
         variant={formVariant}
       />
+      <DemoBookingFlow
+        open={demoOpen}
+        onOpenChange={setDemoOpen}
+      />
     </div>
   );
 }
@@ -50,6 +60,7 @@ export const useFormOpener = () => useContext(FormContext);
 
 export function LayoutWithContext({ children }: LayoutProps) {
   const [formOpen, setFormOpen] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
   const [formVariant, setFormVariant] = useState<"register" | "demo" | "earlybird">("register");
   const pathname = usePathname();
 
@@ -58,8 +69,12 @@ export function LayoutWithContext({ children }: LayoutProps) {
   }, [pathname]);
 
   const handleOpenForm: FormOpener = (variant) => {
-    setFormVariant(variant);
-    setFormOpen(true);
+    if (variant === "demo") {
+      setDemoOpen(true);
+    } else {
+      setFormVariant(variant);
+      setFormOpen(true);
+    }
   };
 
   return (
@@ -74,6 +89,10 @@ export function LayoutWithContext({ children }: LayoutProps) {
           open={formOpen}
           onOpenChange={setFormOpen}
           variant={formVariant}
+        />
+        <DemoBookingFlow
+          open={demoOpen}
+          onOpenChange={setDemoOpen}
         />
       </div>
     </FormContext.Provider>

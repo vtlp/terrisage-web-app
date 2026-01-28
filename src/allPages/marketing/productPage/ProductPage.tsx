@@ -24,32 +24,32 @@ const workflowSections = [
             {
                 icon: Target,
                 title: "Lead management",
-                howItWorks: "Capture → Qualify → Assign → Follow-up queue → Stage updates → Outcome tracking.",
-                includes: "Lead source tags, status/stage, next action, owner, notes, conversation links.",
+                howItWorks: "Capture enquiries, understand buyer intent early, and keep every lead moving with clear next steps.",
+                includes: "Source tracking • Pipeline stages • Notes & conversation history",
             },
             {
                 icon: Users,
                 title: "Property management",
-                howItWorks: "Create property record → Attach media/details → Link to leads → Track interest/viewings/feedback.",
-                includes: "Structured fields, shareable listing views, internal visibility controls.",
+                howItWorks: "Create a property once, capture owner intent and listing readiness, then link it to leads to track interest and feedback.",
+                includes: "Shareable property view • Structured property fields • Visibility controls",
             },
             {
                 icon: Megaphone,
                 title: "Marketing workflows",
-                howItWorks: "Campaign → Enquiries captured → Attribution stored → Follow-ups tracked → Conversion visibility.",
-                includes: "Meta/Google enquiry handling, forms, lead source analytics.",
+                howItWorks: "Run campaigns, capture enquiries with intent signals, and see which channels drive qualified conversions.",
+                includes: "Meta/Google lead capture • Attribution • Source insights",
             },
             {
                 icon: CalendarCheck,
                 title: "Tasks & follow-ups",
-                howItWorks: "Task templates + Reminders + Daily focus queue; overdue prevention.",
-                includes: "Team views, personal queue, manager oversight.",
+                howItWorks: "Turn intent into action using templates and reminders, so buyers and owners never go cold.",
+                includes: "Personal & team queues • Overdue alerts • Manager visibility",
             },
             {
                 icon: Zap,
                 title: "Automation",
-                howItWorks: "Simple rules trigger nudges (e.g., 'no reply in 2 days'), stage moves, and reminders.",
-                includes: "Automation is optional and controlled; no noisy AI.",
+                howItWorks: "Set simple, optional rules that respond to intent, nudging the right person at the right time without noise.",
+                includes: "No-response nudges • Reminder rules • Stage updates",
             },
         ],
     },
@@ -64,7 +64,7 @@ const integrations = [
     {
         icon: MessageSquare,
         title: "Communications",
-        description: "WhatsApp and social media touchpoints—capturing context and keeping it organised.",
+        description: "Connect with external portals, Meta ads, Google and your website traffic.",
     },
     {
         icon: Megaphone,
@@ -84,7 +84,7 @@ const analytics = [
     },
     {
         title: "Market analytics",
-        description: "Trends in real estate, sales, and technology—curated signals rather than predictions.",
+        description: "Trends in real estate, sales, and technology: curated signals rather than predictions.",
     },
 ];
 
@@ -141,12 +141,12 @@ export default function ProductPage() {
                                             <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
                                         </div>
                                         <div>
-                                            <p className="text-sm text-muted-foreground mb-2">How it works</p>
+                                            <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">How it works</p>
                                             <p className="text-sm">{item.howItWorks}</p>
                                         </div>
                                         <div>
-                                            <p className="text-sm text-muted-foreground mb-2">Includes</p>
-                                            <p className="text-sm">{item.includes}</p>
+                                            <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">Includes</p>
+                                            <p className="text-sm font-medium">{item.includes}</p>
                                         </div>
                                     </div>
                                 </div>

@@ -61,9 +61,8 @@ export default function EarlybirdPage() {
                         </div>
 
                         {/* Terms */}
-                        <div className="bg-muted/50 rounded-xl p-6 text-sm text-muted-foreground">
-                            <p className="font-medium text-foreground mb-2">Terms</p>
-                            <p>
+                        <div className="mt-12 pt-8 border-t border-border/50">
+                            <p className="text-xs sm:text-sm italic text-muted-foreground leading-relaxed">
                                 Early Bird availability is limited to the first 50 eligible agencies and is secured on contract signature and/or first payment (as stated in your order form). Discount applies to the agreed plan only and is not transferable. Free onboarding is provided within a defined scope and timeframe; additional services are chargeable. "New features" refers to standard plan releases during the first 12 months; excludes premium modules, usage-based charges, third-party fees, and bespoke development. Offer may be amended or withdrawn at any time prior to acceptance.
                             </p>
                         </div>
