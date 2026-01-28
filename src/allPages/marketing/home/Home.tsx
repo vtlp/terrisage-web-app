@@ -26,7 +26,7 @@ export default function HomePage() {
                                 The only CRM you'll ever need
                             </h1>
                             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-xl text-balance">
-                                Mobile-first CRM for real estate teams to manage leads, listings, follow-ups, marketing and team execution—without admin chaos.
+                                Mobile-first CRM for real estate teams to manage leads, properties, follow-ups, marketing and team execution without admin chaos.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 mb-4">
@@ -45,9 +45,7 @@ export default function HomePage() {
                                     Book a demo
                                 </Button>
                             </div>
-                            <p className="text-sm text-muted-foreground">
-                                No calendar links. Share your details and we'll get in touch.
-                            </p>
+
                         </div>
 
                         {/* Hero Visuals */}

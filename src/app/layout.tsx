@@ -11,7 +11,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Terrisage",
-  description: "Land intelligence and management platform.",
+  description: "Mobile-first CRM for real estate sales and property management.",
 };
 
 export default function RootLayout({

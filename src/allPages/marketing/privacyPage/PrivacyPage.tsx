@@ -12,8 +12,8 @@ export default function PrivacyPage() {
                     </p>
                     <p>
                         For any privacy-related enquiries, please contact us at{" "}
-                        <a href="mailto:contact@vtlptechnologies.com" className="text-primary hover:underline">
-                            contact@vtlptechnologies.com
+                        <a href="mailto:contact@terrisage.com" className="text-primary hover:underline">
+                            contact@terrisage.com
                         </a>
                     </p>
                 </div>

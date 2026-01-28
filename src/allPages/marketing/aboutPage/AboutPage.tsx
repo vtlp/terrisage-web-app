@@ -4,28 +4,7 @@ import { useFormOpener } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Shield, Lightbulb, Heart, Zap } from "lucide-react";
 
-const principles = [
-    {
-        icon: Zap,
-        title: "Mobile-first, always",
-        description: "Real estate happens on the go. Our tools are built for action, not desk work.",
-    },
-    {
-        icon: Shield,
-        title: "Privacy by design",
-        description: "We build with care for data privacy and good judgement, because reputation is not something you automate.",
-    },
-    {
-        icon: Lightbulb,
-        title: "AI with restraint",
-        description: "Useful, discreet, and firmly under your control. We build for the former, not the noise.",
-    },
-    {
-        icon: Heart,
-        title: "Human touch",
-        description: "Technology should support how professionals earn trust: by being responsive, reliable, and respectful.",
-    },
-];
+
 
 export default function AboutPage() {
     const openForm = useFormOpener();
@@ -42,43 +21,20 @@ export default function AboutPage() {
 
                         <div className="prose prose-lg text-muted-foreground space-y-6">
                             <p>
-                                Terrisage is a mobile-first CRM for real estate teams, built to keep work moving and relationships intact. It brings order to leads, steadiness to follow-ups, and a clear view of what matters next—without turning your day into a paperwork exercise.
+                                Terrisage is a mobile-first CRM for real estate teams. It is a sales desk in your pocket: your lead book, follow-up diary, and site-visit register, organised as an enquiry-to-closure pipeline, with clear ownership across the team.
                             </p>
                             <p>
-                                We come from technology, and we are convinced it can improve real estate sales and marketing in practical ways. Used well, AI can take care of the routine: surfacing priorities, reducing repetition, and helping teams stay consistent. Used badly, it becomes noise. Terrisage is designed for the former—useful, discreet, and firmly under your control.
+                                Real estate is, at its heart, personal because every decision is tied to someone’s life, time, and money. When it’s personal, trust isn’t a slogan; it’s built in the everyday moments.
                             </p>
                             <p>
-                                Real estate is, at its heart, personal. Our aim is to support the way professionals earn trust: by being responsive, reliable, and respectful with information. We build with care for privacy and good judgement, because reputation is not something you automate.
-                            </p>
-                            <p>
-                                Terrisage is for teams who want modern tools, a premium standard, and a system that helps them grow—without losing the human touch.
+                                Terrisage is built for agents, brokers, developers' sales wing, and property managers to help them stay responsive, handle information with care, and take the right next step at the right time, yielding smoother transactions and trust at scale.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Design Principles */}
-            <section className="section-padding bg-card">
-                <div className="container-wide">
-                    <h2 className="text-3xl font-bold mb-10">Design principles</h2>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {principles.map((principle, index) => {
-                            const Icon = principle.icon;
-                            return (
-                                <div key={index} className="bg-background rounded-xl p-6 border border-border/50">
-                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                                        <Icon className="w-6 h-6 text-primary" />
-                                    </div>
-                                    <h3 className="font-semibold text-lg mb-2">{principle.title}</h3>
-                                    <p className="text-sm text-muted-foreground">{principle.description}</p>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
 
             {/* CTA */}
             <section className="section-padding bg-background border-t border-border">

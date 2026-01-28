@@ -40,7 +40,7 @@ const variants = {
   },
   demo: {
     title: "Book a demo",
-    description: "No calendar links. Share your details and we'll arrange a time that works for you.",
+    description: "Share a few details and we’ll tailor a quick view of how Terrisage fits your team’s day-to-day.",
   },
   earlybird: {
     title: "Apply for Early Bird",
@@ -52,7 +52,7 @@ export function LeadCaptureForm({ open, onOpenChange, variant }: LeadCaptureForm
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
-  
+
   const {
     register,
     handleSubmit,
@@ -73,14 +73,14 @@ export function LeadCaptureForm({ open, onOpenChange, variant }: LeadCaptureForm
     }
 
     setIsSubmitting(true);
-    
+
     try {
       // TODO: Replace with actual email service integration
       // Example using EmailJS, Resend, SendGrid, or Postmark
       // For now, we'll simulate the submission
-      
+
       console.log("Form submission:", {
-        to: "contact@vtlptechnologies.com",
+        to: "contact@terrisage.com",
         from: data.email,
         subject: `New ${variant} request from ${data.name}`,
         data: {
@@ -95,20 +95,20 @@ export function LeadCaptureForm({ open, onOpenChange, variant }: LeadCaptureForm
 
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1500));
-      
+
       setIsSuccess(true);
-      
+
       // Show success state for 3 seconds then close
       setTimeout(() => {
         onOpenChange(false);
         setIsSuccess(false);
         reset();
       }, 3000);
-      
+
     } catch (error) {
       toast({
         title: "Something went wrong",
-        description: "Please try again or email us directly at contact@vtlptechnologies.com",
+        description: "Please try again or email us directly at contact@terrisage.com",
         variant: "destructive",
       });
     } finally {
@@ -133,9 +133,16 @@ export function LeadCaptureForm({ open, onOpenChange, variant }: LeadCaptureForm
               <CheckCircle className="w-8 h-8 text-primary" />
             </div>
             <DialogTitle className="text-xl mb-2">We've received your request</DialogTitle>
-            <DialogDescription className="text-muted-foreground">
+            <DialogDescription className="text-muted-foreground mb-6">
               Thank you for your interest. We'll be in touch shortly.
             </DialogDescription>
+            <Button
+              variant="outline"
+              className="w-full"
+              onClick={handleClose}
+            >
+              Back to Home
+            </Button>
           </div>
         ) : (
           <>

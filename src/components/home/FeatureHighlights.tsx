@@ -5,7 +5,7 @@ const features = [
   {
     icon: Inbox,
     title: "Enquiries, instantly organised",
-    description: "Capture enquiries from forms, ads and messages, then route them to the right owner with the right context—ready to action.",
+    description: "Capture enquiries from forms, ads and messages, then route them to the right owner with the right context, ready to action.",
   },
   {
     icon: Target,
@@ -15,32 +15,22 @@ const features = [
   {
     icon: Building2,
     title: "Properties that sell",
-    description: "Keep listings structured, media-ready, and linked to leads, viewings and feedback—one clean record.",
+    description: "Keep properties structured, media-ready, and linked to leads, viewings and feedback in one clean record.",
   },
   {
     icon: Link,
     title: "Best matches, faster",
-    description: "Match buyers and tenants to the right listings using preferences, budget bands, and intent signals—instantly.",
+    description: "Match buyers and tenants to the right properties using preferences, budget bands, and intent signals instantly.",
+  },
+  {
+    icon: Zap,
+    title: "Automation that behaves",
+    description: "Preset automation keeps tasks, reminders and queues moving, with timely nudges and status updates sent automatically.",
   },
   {
     icon: Users,
     title: "Agent network, curated",
     description: "Build a trusted partner network, route opportunities, and keep collaboration accountable.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Follow-ups you can trust",
-    description: "Tasks, reminders and queues that keep momentum—without managers chasing updates.",
-  },
-  {
-    icon: Zap,
-    title: "Automation that behaves",
-    description: "Trigger nudges and updates based on activity—simple rules, fully under your control.",
-  },
-  {
-    icon: Brain,
-    title: "AI with judgement",
-    description: "Surface intent and patterns—then refine them with human judgement and relationship notes that keep deals real.",
   },
 ];
 
@@ -81,8 +71,8 @@ export function FeatureHighlights() {
           </div>
         </div>
 
-        {/* Desktop: 4-column grid */}
-        <div className="hidden lg:grid grid-cols-4 gap-6">
+        {/* Desktop: 3-column grid */}
+        <div className="hidden lg:grid grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <FeatureCard key={index} feature={feature} />
           ))}
@@ -94,7 +84,7 @@ export function FeatureHighlights() {
 
 function FeatureCard({ feature }: { feature: typeof features[0] }) {
   const Icon = feature.icon;
-  
+
   return (
     <div className="flex-shrink-0 w-[280px] lg:w-auto snap-start">
       <div className="bg-background rounded-xl p-6 h-full border border-border/50 card-hover group">
@@ -102,12 +92,12 @@ function FeatureCard({ feature }: { feature: typeof features[0] }) {
         <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center mb-5 group-hover:bg-accent/30 transition-colors">
           <Icon className="w-7 h-7 text-primary" />
         </div>
-        
+
         {/* Title */}
         <h3 className="font-semibold text-lg mb-2">
           {feature.title}
         </h3>
-        
+
         {/* Description */}
         <p className="text-sm text-muted-foreground leading-relaxed">
           {feature.description}

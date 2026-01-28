@@ -7,13 +7,13 @@ const resources = [
         icon: FileText,
         title: "CRM Hygiene That Prints Money",
         subtitle: "Notes, Tags, Pipelines, and Follow-up Discipline",
-        summary: "Practical habits that make a CRM worth using—clean data, clear next-steps, and follow-up discipline that directly improves conversion.",
+        summary: "Practical habits that make a CRM worth using: clean data, clear next-steps, and follow-up discipline that directly improves conversion.",
     },
     {
         icon: Clock,
         title: "Rocks, Pebbles, and Sand",
         subtitle: "The Time Framework Every Agent Needs",
-        summary: "A simple productivity model to protect revenue-driving work and reduce busywork—ideal for agents who want structure without complexity.",
+        summary: "A simple productivity model to protect revenue-driving work and reduce busywork, ideal for agents who want structure without complexity.",
     },
     {
         icon: TrendingUp,
@@ -25,19 +25,19 @@ const resources = [
         icon: Target,
         title: "Reading the Real Motive",
         subtitle: "Using 'Reason for Selling' to Close More Deals",
-        summary: "Shows the value of structured CRM fields—how the right dropdowns and notes uncover motivation, improve conversations, and shorten time-to-close.",
+        summary: "Shows the value of structured CRM fields: how the right dropdowns and notes uncover motivation, improve conversations, and shorten time-to-close.",
     },
     {
         icon: Image,
         title: "Cover Shot Secrets",
         subtitle: "How the Right Property Image Boosts Clicks and Conversions",
-        summary: "A conversion-focused piece that positions your CRM as performance-led (not admin-led): better listings → higher engagement → better pipeline.",
+        summary: "A conversion-focused piece that positions your CRM as performance-led (not admin-led): better properties, higher engagement, better pipeline.",
     },
     {
         icon: Lightbulb,
         title: "Think Like an Investor",
         subtitle: "10-Year Vision → 90-Day Rocks for Execution",
-        summary: "A modern operator mindset article: how top agents build systems, commit to one path, and execute consistently—aligns strongly with adopting tools.",
+        summary: "A modern operator mindset article: how top agents build systems, commit to one path, and execute consistently, aligned strongly with adopting tools.",
     },
 ];
 
