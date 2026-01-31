@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
 import { LeadCaptureForm } from "@/components/LeadCaptureForm";
-import { DemoBookingFlow } from "@/components/DemoBookingFlow";
 import { usePathname } from "next/navigation";
+import { getCalApi } from "@calcom/embed-react";
+import { useTheme } from "next-themes";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,7 +14,6 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const [formOpen, setFormOpen] = useState(false);
-  const [demoOpen, setDemoOpen] = useState(false);
   const [formVariant, setFormVariant] = useState<"register" | "demo" | "earlybird">("register");
   const pathname = usePathname();
 
@@ -22,13 +22,27 @@ export function Layout({ children }: LayoutProps) {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  const { theme, resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ "namespace": "30min" });
+      const currentTheme = (theme === 'system' ? resolvedTheme : theme) || 'light';
+      cal("ui", {
+        "theme": currentTheme as any,
+        "cssVarsPerTheme": {
+          "light": { "cal-brand": "#667a00" },
+          "dark": { "cal-brand": "#283000" }
+        },
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
+    })();
+  }, [theme, resolvedTheme]);
+
   const handleOpenForm = (variant: "register" | "demo" | "earlybird") => {
-    if (variant === "demo") {
-      setDemoOpen(true);
-    } else {
-      setFormVariant(variant);
-      setFormOpen(true);
-    }
+    setFormVariant(variant);
+    setFormOpen(true);
   };
 
   return (
@@ -43,10 +57,6 @@ export function Layout({ children }: LayoutProps) {
         onOpenChange={setFormOpen}
         variant={formVariant}
       />
-      <DemoBookingFlow
-        open={demoOpen}
-        onOpenChange={setDemoOpen}
-      />
     </div>
   );
 }
@@ -60,7 +70,6 @@ export const useFormOpener = () => useContext(FormContext);
 
 export function LayoutWithContext({ children }: LayoutProps) {
   const [formOpen, setFormOpen] = useState(false);
-  const [demoOpen, setDemoOpen] = useState(false);
   const [formVariant, setFormVariant] = useState<"register" | "demo" | "earlybird">("register");
   const pathname = usePathname();
 
@@ -68,13 +77,27 @@ export function LayoutWithContext({ children }: LayoutProps) {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  const { theme, resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ "namespace": "30min" });
+      const currentTheme = (theme === 'system' ? resolvedTheme : theme) || 'light';
+      cal("ui", {
+        "theme": currentTheme as any,
+        "cssVarsPerTheme": {
+          "light": { "cal-brand": "#667a00" },
+          "dark": { "cal-brand": "#283000" }
+        },
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
+    })();
+  }, [theme, resolvedTheme]);
+
   const handleOpenForm: FormOpener = (variant) => {
-    if (variant === "demo") {
-      setDemoOpen(true);
-    } else {
-      setFormVariant(variant);
-      setFormOpen(true);
-    }
+    setFormVariant(variant);
+    setFormOpen(true);
   };
 
   return (
@@ -89,10 +112,6 @@ export function LayoutWithContext({ children }: LayoutProps) {
           open={formOpen}
           onOpenChange={setFormOpen}
           variant={formVariant}
-        />
-        <DemoBookingFlow
-          open={demoOpen}
-          onOpenChange={setDemoOpen}
         />
       </div>
     </FormContext.Provider>
