@@ -40,7 +40,9 @@ export default function HomePage() {
                                 <Button
                                     variant="hero-outline"
                                     size="lg"
-                                    onClick={() => openForm("demo")}
+                                    data-cal-namespace="30min"
+                                    data-cal-link="terrisage-product-demo/30min"
+                                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
                                 >
                                     Book a demo
                                 </Button>

@@ -66,7 +66,9 @@ export function Navigation({ onOpenForm }: NavigationProps) {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => onOpenForm("demo")}
+              data-cal-namespace="30min"
+              data-cal-link="terrisage-product-demo/30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               className="text-muted-foreground hover:text-foreground"
             >
               Book a demo
@@ -127,10 +129,10 @@ export function Navigation({ onOpenForm }: NavigationProps) {
                   <Button
                     variant="outline"
                     className="w-full"
-                    onClick={() => {
-                      setIsOpen(false);
-                      onOpenForm("demo");
-                    }}
+                    data-cal-namespace="30min"
+                    data-cal-link="terrisage-product-demo/30min"
+                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                    onClick={() => setIsOpen(false)}
                   >
                     Book a demo
                   </Button>
