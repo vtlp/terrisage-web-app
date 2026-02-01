@@ -11,10 +11,10 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Who is it for", href: "/#who-is-it-for" },
-  { label: "Product", href: "/product" },
+  // { label: "Product", href: "/product" },
   { label: "Earlybird offers", href: "/earlybird" },
   { label: "Resources", href: "/resources" },
-  { label: "About us", href: "/about" },
+  { label: "About", href: "/about" },
 ];
 
 interface NavigationProps {
@@ -28,6 +28,39 @@ export function Navigation({ onOpenForm }: NavigationProps) {
   const isActive = (href: string) => {
     if (href.startsWith("/#")) return pathname === "/";
     return pathname === href;
+  };
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    // Only handle hash links
+    if (href.startsWith("/#") || href.startsWith("#")) {
+      const hash = href.includes("#") ? href.split("#")[1] : href.replace("#", "");
+
+      // If we are on the home page, prevent default navigation and scroll manually
+      if (pathname === "/") {
+        e.preventDefault();
+        const element = document.getElementById(hash);
+        if (element) {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+
+          // Close mobile menu if open
+          setIsOpen(false);
+
+          // Update URL hash without scroll
+          window.history.pushState(null, "", `/#${hash}`);
+        }
+      } else {
+        // If on another page, let normal navigation happen
+        // The ScrollToHash component will handle scrolling after page load
+        setIsOpen(false);
+      }
+    }
   };
 
   return (
@@ -54,6 +87,7 @@ export function Navigation({ onOpenForm }: NavigationProps) {
                     ? "text-primary bg-primary/5"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 )}
+                onClick={(e) => handleScroll(e, link.href)}
               >
                 {link.label}
               </Link>
@@ -107,7 +141,7 @@ export function Navigation({ onOpenForm }: NavigationProps) {
                       <Link
                         key={link.href}
                         href={link.href}
-                        onClick={() => setIsOpen(false)}
+                        onClick={(e) => handleScroll(e, link.href)}
                         className={cn(
                           "px-4 py-3 text-base font-medium rounded-lg transition-colors",
                           isActive(link.href)

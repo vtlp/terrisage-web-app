@@ -5,17 +5,17 @@ const features = [
   {
     icon: Inbox,
     title: "Enquiries, instantly organised",
-    description: "Capture enquiries from forms, ads and messages, then route them to the right owner with the right context, ready to action.",
+    description: "Capture enquiries from web forms, ads and portals, then route them to the right owner with the right context, ready to action.",
   },
   {
     icon: Target,
-    title: "Leads, under control",
-    description: "Assign owners, qualify quickly, and keep next steps visible so nothing slips.",
+    title: "Qualified leads, clean stages",
+    description: "Qualify early, assign clear ownership, and move leads through stage gates only when real actions happen, so next steps remain obvious, and attention is directed toward serious buyers and tenants.",
   },
   {
     icon: Building2,
-    title: "Properties that sell",
-    description: "Keep properties structured, media-ready, and linked to leads, viewings and feedback in one clean record.",
+    title: "Inventory, on the move",
+    description: "Keep every property clean, current, and close-ready in one record. Capture the context prospects care about, then use gentle nudges to keep availability fresh and link it all to leads and feedback.",
   },
   {
     icon: Link,

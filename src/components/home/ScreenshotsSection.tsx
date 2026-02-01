@@ -7,7 +7,8 @@ export function ScreenshotsSection() {
             Designed for real work
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mobile-first means you can take action anywhere. Desktop gives you the full picture.
+            {/* Mobile-first means you can take action anywhere. Desktop gives you the full picture. */}
+            Mobile-first means you can act from anywhere. On desktop, you simply see more at once.
           </p>
         </div>
 
@@ -31,7 +32,8 @@ export function ScreenshotsSection() {
             ))}
           </div>
           <p className="text-center text-sm text-muted-foreground mt-4 italic">
-            Mobile app screenshots: placeholders to be replaced
+            {/* Mobile app screenshots: placeholders to be replaced */}
+            Placeholders for screens….
           </p>
         </div>
 

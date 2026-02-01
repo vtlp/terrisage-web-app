@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
+import { ScrollToHash } from "@/components/layout/ScrollToHash";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -22,7 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${dmSans.variable} font-sans antialiased`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Suspense fallback={null}>
+            <ScrollToHash />
+          </Suspense>
+          {children}
+        </Providers>
       </body>
     </html>
   );
