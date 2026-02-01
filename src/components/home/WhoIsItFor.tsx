@@ -3,8 +3,8 @@ import { UserCheck, Users, Building } from "lucide-react";
 const audiences = [
   {
     icon: UserCheck,
-    title: "Independent agents & agencies",
-    description: "Solo agents and small agencies who need structure without complexity.",
+    title: "Channel Partners & Consultants",
+    description: "Organise projects, track leads and manage lead claim windows while advising clients confidently.",
   },
   {
     icon: Users,

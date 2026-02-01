@@ -23,10 +23,10 @@ export default function HomePage() {
                         {/* Hero Content */}
                         <div className="order-2 lg:order-1">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance">
-                                The only CRM you'll ever need
+                                Your pipeline, in your pocket
                             </h1>
                             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-xl text-balance">
-                                Mobile-first CRM for real estate teams to manage leads, properties, follow-ups, marketing and team execution without admin chaos.
+                                Mobile-first CRM for Real Estate teams to manage leads, properties, follow-ups, marketing and team execution without admin chaos.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 mb-4">
