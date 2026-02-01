@@ -1,10 +1,10 @@
 import { X, Check } from "lucide-react";
 
 const comparisons = [
-  {
-    old: "WhatsApp + notes fragmented across devices",
-    new: "Conversations and context in one place",
-  },
+  // {
+  //   old: "WhatsApp + notes fragmented across devices",
+  //   new: "Conversations and context in one place",
+  // },
   {
     old: "Missed follow-ups and forgotten leads",
     new: "Automated reminders and clear next steps",
@@ -29,9 +29,17 @@ const comparisons = [
     old: "Manual data entry after hours",
     new: "Capture information as you work",
   },
+  // {
+  //   old: "No visibility into team performance",
+  //   new: "Activity and outcome dashboards",
+  // },
   {
-    old: "No visibility into team performance",
-    new: "Activity and outcome dashboards",
+    old: "Unclear lead claims and disputed eligibility",
+    new: "Tagged leads with clear claim windows and status timers",
+  },
+  {
+    old: "Builder projects scattered across PDFs, portals, and chats",
+    new: "Builders and authorised projects organised in one place, ready to share",
   },
 ];
 

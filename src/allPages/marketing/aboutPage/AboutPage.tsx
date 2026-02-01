@@ -24,10 +24,12 @@ export default function AboutPage() {
                                 Terrisage is a mobile-first CRM for real estate teams. It is a sales desk in your pocket: your lead book, follow-up diary, and site-visit register, organised as an enquiry-to-closure pipeline, with clear ownership across the team.
                             </p>
                             <p>
-                                Real estate is, at its heart, personal because every decision is tied to someone’s life, time, and money. When it’s personal, trust isn’t a slogan; it’s built in the everyday moments.
+                                {/* Real estate is, at its heart, personal because every decision is tied to someone’s life, time, and money. When it’s personal, trust isn’t a slogan; it’s built in the everyday moments. */}
+                                Real estate is, at its heart, personal because every decision is tied to someone&apos;s life, time, and money. Across homes, offices, and investments, trust is what keeps decisions moving. Terrisage is designed to make that trust practical, helping teams stay organised, responsive, and consistent in the small steps that move people from interest to confident decisions.
                             </p>
                             <p>
-                                Terrisage is built for agents, brokers, developers' sales wing, and property managers to help them stay responsive, handle information with care, and take the right next step at the right time, yielding smoother transactions and trust at scale.
+                                {/* Terrisage is built for agents, brokers, developers&apos; sales wing, and property managers to help them stay responsive, handle information with care, and take the right next step at the right time, yielding smoother transactions and trust at scale. */}
+                                Built for agents, brokers, consultants, and developers who win business through networks, portals, WhatsApp, and Social-Media, Terrisage fits naturally around the way you already sell.
                             </p>
                         </div>
                     </div>

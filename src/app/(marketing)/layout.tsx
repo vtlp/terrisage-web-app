@@ -2,7 +2,7 @@ import { LayoutWithContext } from "@/components/layout/Layout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Terrisage - Building Trust in Every Property",
+    title: "Terrisage: Mobile-First CRM for Real Estate",
     description: "Terrisage is a mobile-first CRM for real estate teams to manage leads, properties, and follow-ups.",
 };
 

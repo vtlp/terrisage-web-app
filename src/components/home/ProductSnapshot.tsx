@@ -59,7 +59,7 @@ export function ProductSnapshot() {
           })}
         </div>
 
-        <div className="text-center mt-10">
+        {/* <div className="text-center mt-10">
           <Link
             href="/product"
             className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
@@ -67,7 +67,7 @@ export function ProductSnapshot() {
             Explore the full product
             <ArrowRight className="w-4 h-4" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
