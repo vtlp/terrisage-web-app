@@ -10,6 +10,7 @@ import { ScreenshotsSection } from "@/components/home/ScreenshotsSection";
 import { EarlybirdTeaser } from "@/components/home/EarlybirdTeaser";
 import { ResourcesTeaser } from "@/components/home/ResourcesTeaser";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { ScreenshotsSection2 } from "@/components/home/ScreenshotsSection2";
 
 export default function HomePage() {
     const openForm = useFormOpener();
