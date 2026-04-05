@@ -1,0 +1,12 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.terrisage.app.stg",
+        "sha256_cert_fingerprints": [
+          "C7:11:6F:2F:C3:10:DE:6A:8C:84:C2:01:CD:D9:79:BC:39:21:B7:34:11:7F:CD:69:88:94:23:39:89:88:50:D2"
+        ]
+      }
+    }
+  ]
